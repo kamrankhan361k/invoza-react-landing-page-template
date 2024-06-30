@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!--SEO Meta Tags-->
+	<meta charset="utf-8" />
+	<!-- SITE TITLE -->
+	<title>Invoza - React Responsive Bootstrap 4 Landing Page Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta content="Responsive Bootstrap Multi-Purpose Landing Page Template" name="description" />
+	<meta name="keywords" content="Landing, Bootstrap, Landing page, Template, Registration, Landing">
+	<meta content="Themesdesign" name="author" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Google-Fonts -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800">
+
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/prettify.css" />
+
+	<!-- Custom CSS -->
+	<link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="text-center">
+				<a class="logo" href="#">Invoza React Documentation 1.0</a>
+			</div>
+		</div><!-- /.container-fluid -->
+	</nav>
+
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li>
+					<a href="#intro">Introduction</a>
+				</li>
+				<li>
+					<a href="#structure">Structure</a>
+				</li>
+				<li>
+					<a href="#credits">Plugins &amp; Resources (Credits)</a>
+				</li>
+				<li>
+					<a href="#support">Support</a>
+				</li>
+				<li><a href="#changelog">Change Log</a></li>
+			</ul>
+		</div>
+		<!-- /#sidebar-wrapper -->
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="right-bar">
+
+							<div>
+
+								<div id="intro">
+									<h3 class="page-header">Thank you very much for your purchase!</h3>
+
+									<div>
+										<div class="alert alert-info">
+											<p>If you have any questions that are beyond the scope of this
+												documentation, please feel free to email or contact us via my page.</p>
+										</div>
+									</div>
+								</div>
+
+								<h4 class="page-header">Introduction</h4>
+
+								<p>Invoza is a multi purpose Bootstrap 4 landing page template built with React js.This
+									responsive template comes with 6 Demo variations which can be used to build your
+									product, service, marketing, app and SaaS landing pages. It’s fully responsive and
+									built with bootstrap v4.5.0. You will be easily able to customize it for your needs.
+								</p>
+								<p>
+									Please feel free to get back to me in case if you are having any question or
+									feedback.
+								</p>
+
+
+
+								<div id="structure" class="com-container">
+									<h4 class="page-header">Structure</h4>
+									<p>I have tried to follow the standards and modular structure while developing the
+										theme. Following sections are explaining the theme File &amp; Folder, structure,
+										html file struture and plugins.</p>
+
+									<div class="row p-t-20">
+										<div class="col-sm-12">
+											<h4>File &amp; Folder Structure</h4>
+											<hr />
+
+											<pre class="prettyprint">
+├── public
+├── src
+│   ├── assets
+│   ├── components
+│   ├── pages
+│   ├── App.js
+│   ├── App.test.js
+│   ├── App.test.js
+│   ├── index.css
+│   ├── index.js
+│   ├── routes.js
+│   ├── serviceWorker.js
+│   ├── setupTests.js
+│   └── theme.scss
+├── package.json
+└── package-lock.json
+</pre>
+
+
+											<div class="row">
+												<div class="col-sm-12 p-t-30">
+													<h4>App.js Structure</h4>
+													<hr />
+
+													<pre>
+import React, { Component } from "react";
+import routes from "./routes";
+import {
+	withRouter,
+	Route,
+	Switch,
+	BrowserRouter as Router
+} from "react-router-dom";
+
+// Import Scss
+import "./theme.scss";
+
+//Import Icon Css
+import "./assets/css/materialdesignicons.min.css";
+
+class App extends Component {
+	constructor(props){
+		super(props);
+		this.state = {};
+	}
+	render() {
+		return (
+			&lt;React.Fragment>
+				&lt;Router>
+					&lt;Switch>
+						{routes.map((route, idx) => (
+						&lt;Route path={route.path} component={route.component} key={idx} />
+						))}
+					&lt;/Switch>
+				&lt;/Router>
+			&lt;/React.Fragment>
+		);
+	}
+}
+	
+default withRouter(App);
+													</pre>
+												</div>
+												<div class="col-sm-12 p-t-30">
+													<h5>How to run project</h5>
+													<ul>
+														<li>
+															npm install <br>
+															<small><b> Note : Make sure this all installation process is done in command prompt.</b></small>
+														</li>
+														<li>
+															npm start
+														</li>
+														<li>npm run build <Br>
+														<small>To create a production build.</small></li>
+													</ul>
+
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+
+
+									<div id="credits" class="com-container">
+										<h4 class="page-header">Credits &amp; Official Documentation</h4>
+										<p>We've used the following resources as listed. These are some awesome creation
+											and we are thankful to the community.</p>
+
+										<ul>
+											<li><a href="https://www.npmjs.com/package/bootstrap" rel="nofollow"
+													target="_blank">Bootstrap</a></li>
+											<li><a href="https://www.npmjs.com/package/react" rel="nofollow"
+													target="_blank">react</a></li>
+											<li><a href="https://www.npmjs.com/package/react-owl-carousel"
+													rel="nofollow" target="_blank">react-owl-carousel</a></li>
+											<li><a href="https://www.npmjs.com/package/react-parallax" rel="nofollow"
+													target="_blank">react-parallax</a></li>
+											<li><a href="https://www.npmjs.com/package/react-particles-js"
+													rel="nofollow" target="_blank">react-particles-js</a></li>
+											<li><a href="https://www.npmjs.com/package/reactstrap" rel="nofollow"
+													target="_blank">reactstrap</a></li>
+											<li><a href="https://www.npmjs.com/package/react-image-lightbox"
+													rel="nofollow" target="_blank">react-image-lightbox</a></li>
+										</ul>
+									</div>
+
+									<div id="support" class="com-container">
+										<h4 class="page-header">Support</h4>
+										<p class="m-t-20">
+											Once again thank you for your purchase. I'll be happy to answer the the
+											questions you have related to the theme.
+											In case if you have any suggestion or feature, request please feel free to
+											contact me, I'll try to implement it and will release as part of future
+											updates.
+										</p>
+
+										<p>
+											Stay Awesome!
+										</p>
+
+										<p class="text-primary">
+											- <strong>Themesdesign</strong>
+										</p>
+									</div>
+
+									<div id="changelog">
+
+										<h4 class="page-header">Changelog</h4>
+
+										<p style="margin-top: 20px;"><span
+												style="text-decoration: underline; font-weight: 600;">Version 1.0.0
+											</span> &nbsp;&nbsp;&nbsp;<small class="text-muted"> 07 June 2020</small>
+										</p>
+
+										<ul>
+											<li>
+												Initial released
+											</li>
+										</ul>
+
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /#page-content-wrapper -->
+
+				<div class="text-center">
+					<p class="copy">Copyright © 2019 - 2020 Themesdesign.</p>
+				</div>
+			</div>
+			<!-- /#wrapper -->
+
+			<!-- jQuery -->
+			<script src="js/jquery.js"></script>
+
+			<!-- Bootstrap Core JavaScript -->
+			<script src="js/bootstrap.min.js"></script>
+
+			<script src="js/jquery.easing.min.js"></script>
+
+			<script type="text/javascript" src="js/prettify.js"></script>
+
+			<!-- Menu Toggle Script -->
+			<script>
+
+				//jQuery for page scrolling feature - requires jQuery Easing plugin
+				$(function () {
+					$('.sidebar-nav a').bind('click', function (event) {
+						var $anchor = $(this);
+						$('html, body').stop().animate({
+							scrollTop: $($anchor.attr('href')).offset().top - 100
+						}, 1500, 'easeInOutExpo');
+						event.preventDefault();
+					});
+				});
+			</script>
+
+</body>
+
+</html>
